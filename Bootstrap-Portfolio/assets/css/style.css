@@ -80,4 +80,9 @@
     font: white;
   }
 
+  .btn btn-primary mb-2 {
+
+    background-color: lightgray;
+  }
+
   
