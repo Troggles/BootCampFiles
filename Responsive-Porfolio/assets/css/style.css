@@ -124,3 +124,36 @@ body {
     border-style: solid; 
     border-color:grey;
   }
+
+  @media screen and (max-width: 768px) {
+
+    .container {
+      width: 100%;
+      padding: 20px; 
+
+    }
+
+    
+
+
+  }
+
+
+  @media screen and (max-width: 320px){
+
+    .container {
+        width: 100%; 
+        padding: 20px; 
+    }
+
+}
+
+@media screen and (max-width: 168px) {
+
+    .container {
+        width: 100%;
+        padding: 20px; 
+    }
+
+
+}
