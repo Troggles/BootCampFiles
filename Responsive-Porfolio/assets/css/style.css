@@ -157,6 +157,7 @@ body {
       background: #FFFFFF;
       border-style: solid; 
       border-color:grey;
+      padding: 20px; 
     }
 
 
@@ -182,6 +183,7 @@ body {
     background: #FFFFFF;
     border-style: solid; 
     border-color:grey;
+    padding: 20px; 
   }
 
    h1 {
@@ -224,12 +226,13 @@ body {
       position: static;
       left: 05%;
      }
-     
+
      .form {
       width: 100%;
       background: #FFFFFF;
       border-style: solid; 
       border-color:grey;
+      padding: 20px; 
     }
 
 }
