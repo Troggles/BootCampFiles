@@ -1,6 +1,6 @@
 
 
-body {
+/* body {
     padding: 0;
     margin: 0;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -10,15 +10,15 @@ body {
     background: #efeee7;
     background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/qbkls.png");
     height: 100%;
-  }
+  } */
   
-  header {
+  /* header {
     background: #FFFFFF;
     margin: 0 auto;
     position: static;
     height: 78px;
     width: 100%;
-  }
+  } */
   
   h1 {
     
@@ -36,18 +36,13 @@ body {
   }
   
   h2 {
-    font-size: 24px;
+    /* font-size: 24px;
     color: #4aaaa5;
     background: #FFFFFF;
-    padding: 15px; 
+    padding: 15px;  */
   }
   
-  a {
-    color: gray;
-    text-decoration: none; 
-   
-    
-  }
+
   
   .container {
     width: 960px;
@@ -55,66 +50,28 @@ body {
     padding-top: 02%;
   }
   
-  #main-bio,
-  #bio-image {
-    float: left;
-  }
-  
-  #main-bio, 
-  #portfolio {
-    width: 100%;
-    background: #FFFFFF;
-  }
-  
-  
-  #bio-image {
-    width: 200px;
-    height: 200px;
-    margin-right: 20px;
-  }
+
 
   nav {
-    position: absolute;
+    /* position: absolute;
     right: 25%;
     padding: 25px;
     font-size: 0.85em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 
   }
 
   .footer {
-    position: fixed;
+    /* position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color:#666666;
     color: white;
     text-align: center;
-    height: 50px;  
+    height: 50px;   */
   }
 
-  #FT {
-    padding: 18px;
+  
 
-  }
-
-  #RFM {
-    padding: 18px; 
-
-  }
-
-  #FOD {
-    padding: 18px; 
-
-  }
-
-  #FSN {
-    padding: 18px; 
-  }
-
-  .form {
-    width: 100%;
-    background: #FFFFFF;
-    border-style: solid; 
-    border-color:grey;
-  }
+  
