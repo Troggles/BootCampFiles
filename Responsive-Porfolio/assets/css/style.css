@@ -151,6 +151,13 @@ body {
     left: 10%;
       
     }
+    
+    .form {
+      width: 100%;
+      background: #FFFFFF;
+      border-style: solid; 
+      border-color:grey;
+    }
 
 
   }
@@ -170,9 +177,14 @@ body {
 
     }
 
-   h1 {
+  .form {
+    width: 100%;
+    background: #FFFFFF;
+    border-style: solid; 
+    border-color:grey;
+  }
 
-   
+   h1 {
     padding: 20px;
     margin-bottom: 10px;
     font-size: 0.75em;
@@ -180,7 +192,7 @@ body {
     color: #FFFFFF;
     width: 20%;
     height: 40px;
-    position: absolute;
+    position: static;
     left: 05%;
    }
 
@@ -209,9 +221,15 @@ body {
       color: #FFFFFF;
       width: 20%;
       height: 40px;
-      position: absolute;
+      position: static;
       left: 05%;
      }
-
+     
+     .form {
+      width: 100%;
+      background: #FFFFFF;
+      border-style: solid; 
+      border-color:grey;
+    }
 
 }
