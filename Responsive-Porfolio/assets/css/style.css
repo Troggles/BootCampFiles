@@ -135,6 +135,7 @@ body {
 
     header {
       position: static; 
+      float: right; 
 
     }    
 
@@ -147,7 +148,7 @@ body {
     color: #FFFFFF;
     width: 20%;
     height: 40px;
-    position: absolute;
+    position: static;
     left: 10%;
       
     }
