@@ -140,6 +140,15 @@ body {
 
     h1 {
 
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    background: #4aaaa5;
+    color: #FFFFFF;
+    width: 20%;
+    height: 40px;
+    position: absolute;
+    left: 10%;
       
     }
 
@@ -161,7 +170,22 @@ body {
 
     }
 
+   h1 {
+
+   
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 0.75em;
+    background: #4aaaa5;
+    color: #FFFFFF;
+    width: 20%;
+    height: 40px;
+    position: absolute;
+    left: 05%;
+   }
+
 }
+
 
 @media screen and (max-width: 168px) {
 
@@ -175,6 +199,19 @@ body {
       width: 100%; 
       padding: 20px; 
     }
+
+    h1 {
+
+      padding: 20px;
+      margin-bottom: 10px;
+      font-size: 0.5em;
+      background: #4aaaa5;
+      color: #FFFFFF;
+      width: 20%;
+      height: 40px;
+      position: absolute;
+      left: 05%;
+     }
 
 
 }
