@@ -195,7 +195,7 @@ body {
     color: #FFFFFF;
     width: 20%;
     height: 40px;
-    position: static;
+    position: relative;
     left: 05%;
    }
 
