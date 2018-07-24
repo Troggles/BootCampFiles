@@ -1,4 +1,4 @@
-<script>   
+ 
 
 window.onload = function () {
 
@@ -16,7 +16,7 @@ var showLives = document.getElementById("mylives");
 
 // creating A-Z list
 var buttons = function () {
-    myButtons = document.getElementById("butons");
+    myButtons = document.getElementById("buttons");
     letters = document.createElement('ul');
 
     for (var i = 0; i < alphabet.length; i++) {
@@ -75,7 +75,7 @@ check = function (){
         this.setAttribute("class", "active");
         this.onclick = null;
         for (var i = 0; i < word.length; i++) {
-            if(word[i] === guess) {
+            if(word[i] === guess) { 
                 guesses[i].innerHTML = guess;
                     counter +=1; 
             }
