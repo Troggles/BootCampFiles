@@ -74,9 +74,14 @@ check = function (){
         this.setAttribute("class", "active");
         this.onclick = null;
         for(var i = 0; i < word.length; i++) {
-            if(word[i] === guess )
+            if(word[i] === guess) {
+                guesses[i].innerHTML = guess;
+                    counter +=1; 
+            }
         }
+        
     }
+
 
 }
 
