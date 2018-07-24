@@ -15,12 +15,12 @@ body {
 
 }
 
-/* dont know if this is nessacary
-/* .wrapper:after {
+
+.wrapper:after {
     content: ""; 
     display: table; 
     clear: both; 
-} */
+} 
 
 h1, h2, h3, {
 

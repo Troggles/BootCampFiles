@@ -1,10 +1,13 @@
+<script>   
+
 window.onload = function () {
 
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
+var categories;
 var word; 
 var guess;
-var guesses = [];
+var guesses = [ ];
 var lives; 
 var counter; 
 var space; 
@@ -13,11 +16,10 @@ var showLives = document.getElementById("mylives");
 
 // creating A-Z list
 var buttons = function () {
-
     myButtons = document.getElementById("butons");
     letters = document.createElement('ul');
 
-    for (var i = 0; i < alphabet.length; i++) 
+    for (var i = 0; i < alphabet.length; i++) {
         letters.id = 'alphabet';
         list = document.createElement('li');
         list.id = 'letter';
@@ -52,7 +54,7 @@ result = function () {
 }
 //mylives remaining
 comments = function () {
-    showLives.innherHTML = "You have " + lives + "lives";
+    showLives.innerHTML = "You have " + lives + " lives";
     if (lives < 1) {
         showLives.innerHTML = "Game Over";
     }
@@ -69,11 +71,10 @@ comments = function () {
 //OnClick 
 check = function (){
     list.onclick = function() {
-
         var guess = (this.innerHTML); 
         this.setAttribute("class", "active");
         this.onclick = null;
-        for(var i = 0; i < word.length; i++) {
+        for (var i = 0; i < word.length; i++) {
             if(word[i] === guess) {
                 guesses[i].innerHTML = guess;
                     counter +=1; 
@@ -91,4 +92,6 @@ check = function (){
 
 
 }
+}
 
+</script>
