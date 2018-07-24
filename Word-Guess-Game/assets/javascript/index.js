@@ -32,8 +32,51 @@ var buttons = function () {
 //attempting to create guesses
 result = function () {
     wordHolder = document.getElementById('hold');
-    
+    correct = document.createElement('ul');
+
+    for(var i = 0; i < word.length; i++) {
+        correct.setAttribute('id', 'my-word');
+        guess = document.createAttribute('li');
+        guess.setAttribute('class', 'guess');
+        if (word[i] === "-"){
+            guess.innerHTML = "-";
+            space = 1; 
+        } else {
+            guess.innerHTML = "-";
+        }
+        guesses.push(guess);
+        wordHolder.appendChild(correct);
+        correct.appendChild(guess);
+    }
+
+}
+//mylives remaining
+comments = function () {
+    showLives.innherHTML = "You have " + lives + "lives";
+    if (lives < 1) {
+        showLives.innerHTML = "Game Over";
+    }
+    for(var i = 0; i < guesses.length; i++) {
+        if(counter + space === guesses.length) {
+            showLives.innerHTML = "You Win!";
+        }
+
+    }
+
 
 }
 
+//OnClick 
+check = function (){
+    list.onclick = function() {
+
+        var guess = (this.innerHTML); 
+        this.setAttribute("class", "active");
+        this.onclick = null;
+        for(var i = 0; i < word.length; i++) {
+            if(word[i] === guess )
+        }
+    }
+
+}
 
