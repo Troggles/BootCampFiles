@@ -79,7 +79,14 @@ check = function (){
                     counter +=1; 
             }
         }
-        
+        var j = (word.indexof(guess));
+        if (j === -1) {
+
+            lives -=1; 
+            comments();
+        } else {
+            comments();
+        }
     }
 
 
