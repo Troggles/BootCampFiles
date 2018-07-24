@@ -1,4 +1,4 @@
- 
+<script> 
 
 window.onload = function () {
 
@@ -16,7 +16,7 @@ var showLives = document.getElementById("mylives");
 
 // creating A-Z list
 var buttons = function () {
-    myButtons = document.getElementById("buttons");
+    myButtons = document.getElementById('buttons');
     letters = document.createElement('ul');
 
     for (var i = 0; i < alphabet.length; i++) {
