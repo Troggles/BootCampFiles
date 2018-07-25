@@ -1,5 +1,4 @@
-/* Variabes */
-/* Mixin's */
+
 body {
     background: #a8b361;
     font-family:  "Helvetica", sans-serif;
@@ -13,17 +12,7 @@ body {
     width: 100%;
     margin: 0 auto;
   }
-  /* .wrappper:after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
   
-  /* canvas {
-    color: #fff;
-    border: #fff dashed 2px;
-    padding: 15px;
-  } */
   
   h1, h2, h3 {
     font-family: sans-serif;
@@ -66,10 +55,6 @@ body {
     background: #fff;
     color: #c1d72e;
     cursor: pointer;
-    /* -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -khtml-border-radius: 5px; */
     border: solid 1px #fff;
   }
   #alphabet li:hover {
@@ -94,24 +79,7 @@ body {
     font-size: 1.6em;
   }
   
-  /* .active {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    -moz-transition: all 1s ease-in;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    cursor: default;
-  } */
-  /* .active:hover {
-    -moz-transition: all 1s ease-in;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    -moz-transition: all 1s ease-in;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-  } */
+  
   
   #mylives {
     font-size: 1.6em;
@@ -120,10 +88,7 @@ body {
   }
   
   button {
-    /* -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -khtml-border-radius: 5px; */
+    
     background: #a8b361;
     color: #fff;
     border: solid 1px #fff;
@@ -136,9 +101,7 @@ body {
     outline: none;
   }
   button:hover {
-    /* -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; */
+    
     background: #fff;
     border: solid 1px #fff;
     color: #c1d72e;
