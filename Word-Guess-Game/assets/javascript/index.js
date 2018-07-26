@@ -5,8 +5,7 @@ window.onload = function () {
           't', 'u', 'v', 'w', 'x', 'y', 'z'];
     
     var categories;         
-    var chosenCategory;     
-    var getHint ;          
+    var chosenCategory;            
     var word ;              
     var guess ;             
     var guesses = [ ];      
@@ -16,8 +15,7 @@ window.onload = function () {
   
     // Get elements
     var showLives = document.getElementById("mylives");
-    var showCatagory = document.getElementById("scatagory");
-    var getHint = document.getElementById("hint");
+   
     
   
   
@@ -42,11 +40,11 @@ window.onload = function () {
     // Select Catagory
     var selectCat = function () {
       if (chosenCategory === categories[0]) {
-        catagoryName.innerHTML = "Guitar Related";
+        catagoryName.innerHTML = "The clue is Guitar";
       } else if (chosenCategory === categories[1]) {
-        catagoryName.innerHTML = "Gaming Related";
+        catagoryName.innerHTML = "The clue is PC gaming";
       } else if (chosenCategory === categories[2]) {
-        catagoryName.innerHTML = "Weightlifting Related";
+        catagoryName.innerHTML = "The clue is exercise";
       }
     }
   
@@ -74,7 +72,7 @@ window.onload = function () {
     
     // Show lives
      comments = function () {
-      showLives.innerHTML = "You have " + lives + " guesses";
+      showLives.innerHTML =  + lives + " guesses remaining"
       if (lives < 1) {
         showLives.innerHTML = "Game Over";
       }

@@ -1,6 +1,8 @@
 
 body {
-    background: #a8b361;
+    background: black;
+    background-image: url("https://jogorama.com.br/arquivos/telas/limbo/limbo-01.jpg");
+    background-repeat: no-repeat;
     font-family:  "Helvetica", sans-serif;
     color: #fff;
     height: 100%;
@@ -14,20 +16,14 @@ body {
   }
   
   
-  h1, h2, h3 {
+  h1 {
     font-family: sans-serif;
     font-weight: 100;
     text-transform: uppercase;
     margin: 5px 0;
+    font-size: 2.0em; 
   }
   
-  h1 {
-    font-size: 2.6em;
-  }
-  
-  h2 {
-    font-size: 1.6em;
-  }
   
   p {
     font-size: 1.6em;
@@ -38,7 +34,7 @@ body {
     padding: 0;
     max-width: 900px;
   }
-  /* borrowed */
+  /* looked up */
   #alphabet:after {
     content: "";
     display: table;
@@ -53,12 +49,12 @@ body {
     height: 30px;
     padding-top: 10px;
     background: #fff;
-    color: #c1d72e;
+    color: red;
     cursor: pointer;
     border: solid 1px #fff;
   }
   #alphabet li:hover {
-    background: #c1d72e;
+    background: red;
     border: solid 1px #fff;
     color: #fff;
   }
@@ -87,25 +83,7 @@ body {
     display: block;
   }
   
-  button {
-    
-    background: #a8b361;
-    color: #fff;
-    border: solid 1px #fff;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.2em;
-    padding: 18px 10px;
-    width: 180px;
-    margin: 10px;
-    outline: none;
-  }
-  button:hover {
-    
-    background: #fff;
-    border: solid 1px #fff;
-    color: #c1d72e;
-  }
+  
   
   @media (max-width: 767px) {
     #alphabet {
