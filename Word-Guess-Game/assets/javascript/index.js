@@ -48,7 +48,7 @@ window.onload = function () {
       }
     }
   
-    // Create guesses ul - borrowed
+    // Create guesses ul - looked up 
      result = function () {
       wordHolder = document.getElementById('hold');
       correct = document.createElement('ul');
@@ -70,7 +70,7 @@ window.onload = function () {
       }
     }
     
-    // Show lives
+    // Guess remaining tally
      comments = function () {
       showLives.innerHTML =  + lives + " guesses remaining"
       if (lives < 1) {
@@ -89,20 +89,20 @@ window.onload = function () {
     // OnClick Function
      check = function () {
       list.onclick = function () {
-        var geuss = (this.innerHTML);
+        var guess = (this.innerHTML);
         this.setAttribute("class", "active");
         this.onclick = null;
         for (var i = 0; i < word.length; i++) {
-          if (word[i] === geuss) {
-            guesses[i].innerHTML = geuss;
+          if (word[i] === guess) {
+            guesses[i].innerHTML = guess;
             counter += 1;
           } 
         }
-        var j = (word.indexOf(geuss));
+        var j = (word.indexOf(guess));
         if (j === -1) {
           lives -= 1;
           comments();
-          animate();
+
         } else {
           comments();
         }
@@ -117,7 +117,7 @@ window.onload = function () {
           ["counter-strike", "battlegrounds", "bro-force", "steam", "computer"],
           ["squat", "benchpress", "overheadpress", "deadlift", "chinup"]
       ];
-      //borrowed 
+      //looked up 
       chosenCategory = categories[Math.floor(Math.random() * categories.length)];
       word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
       word = word.replace(/\s/g, "-");
