@@ -1,0 +1,43 @@
+body {
+    background-image: url("../images/Star-Wars-Background-Wallpaper-16990.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    background-color: black;
+}
+h1 {
+	font-family: 'Helvetica', sans-serif;
+	color: red;
+	text-align: right;
+}
+h2 {
+	font-family: 'Helvetica', sans-serif;
+    color: white;	
+}
+.characterButton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+}
+.characterImage {
+    width: 120px;
+    height: 120px;
+}
+.defenderButton {
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    color: white;
+}
+#gameText {
+    font-family: 'Helvetica', sans-serif;
+    color: red;
+    font-size: 24px;
+}
+.possibleEnemies {
+    background-color: red;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
