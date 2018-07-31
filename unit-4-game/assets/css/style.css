@@ -8,7 +8,8 @@ body {
 h1 {
 	font-family: 'Helvetica', sans-serif;
 	color: red;
-	text-align: right;
+    text-align: right;
+    font-size: 32px; 
 }
 h2 {
 	font-family: 'Helvetica', sans-serif;
