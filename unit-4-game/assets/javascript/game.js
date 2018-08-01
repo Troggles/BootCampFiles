@@ -10,7 +10,7 @@ $(document).ready(function(){
     var playerIsChosen = false;
     var enemyIsChosen = false;
     
-    // Display characters on the page 
+    // Display characters 
     function start() {
         $('.display').hide();
         for (var i = 0; i < characters.length; i++) {
@@ -81,7 +81,7 @@ $(document).ready(function(){
             p.append("You attacked " + defenderName + " for " + playerAP + " damage.<br>" + defenderName + " attacked you back for " + defenderCA + " damage.");
             $('#gameText').append(p);
             // increment player's AP by player's Base AP
-            // ===============================================
+            
             if ($('#yourCharacter').children().length > 0 && $('#defender').children().length > 0 && playerHP > 0) {
                 for (var i = 0; i < characters.length; i++) {
                     if (characters[i].name == playerName) {
@@ -106,7 +106,7 @@ $(document).ready(function(){
                 $('#gameText').empty();
                 $('#attack').hide();
                 var p = $('<p>');
-                p.append('Good job, you won!');
+                p.append('WINNER');
                 // restart button
                 var br = $('<br>');
                 p.append(br);
@@ -120,7 +120,7 @@ $(document).ready(function(){
                 $('#gameText').empty();
                 $('#attack').hide();
                 var p = $('<p>');
-                p.append('You have been defeated...GAME OVER!');
+                p.append('GAME OVER!');
                 // restart button
                 var br = $('<br>');
                 p.append(br);
