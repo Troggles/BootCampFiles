@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
     background-image: url("../images/Star-Wars-Background-Wallpaper-16990.jpg");
+=======
+    background-image: url("../images/HelmsDeep-01.jpg");
+>>>>>>> 77044195c6785af8cd0f725decdc27bc95de09ba
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right;
@@ -8,7 +12,12 @@ body {
 h1 {
 	font-family: 'Helvetica', sans-serif;
 	color: red;
+<<<<<<< HEAD
 	text-align: right;
+=======
+    text-align: right;
+    font-size: 32px; 
+>>>>>>> 77044195c6785af8cd0f725decdc27bc95de09ba
 }
 h2 {
 	font-family: 'Helvetica', sans-serif;
@@ -20,8 +29,13 @@ h2 {
     border-color: green;
 }
 .characterImage {
+<<<<<<< HEAD
     width: 100px;
     height: 100px;
+=======
+    width: 120px;
+    height: 120px;
+>>>>>>> 77044195c6785af8cd0f725decdc27bc95de09ba
 }
 .defenderButton {
     background-color: black;
