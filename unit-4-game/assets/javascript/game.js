@@ -92,7 +92,7 @@ $(document).ready(function(){
                 $('#yourCharacter').children().attr('ap', playerAP);
                 console.log(playerAP);
             }
-            // defender hp = 0 or less, remove and choose new defender
+            // defender HP at zero 
             if (defenderHP <= 0) {
                 $('#gameText').empty();
                 $('#defender').empty();
