@@ -4,7 +4,7 @@ $(document).ready(function(){
     var characters = [
         {name: 'Aragorn', img: 'assets/images/aragorn.jpg', hp: 120, ap: 20, ca: 20},
         {name: 'Legolas', img: 'assets/images/Legolas.jpg', hp: 100, ap: 25, ca: 25},
-        {name: 'Uruk-HaiSauron', img: 'assets/images/uruk-hai.jpg', hp: 150, ap: 15, ca: 15},
+        {name: 'Uruk-Hai', img: 'assets/images/uruk-hai.jpg', hp: 150, ap: 15, ca: 15},
         {name: 'Sauron', img: 'assets/images/sauron.jpg', hp: 180, ap: 10, ca: 10}
     ];
     var playerIsChosen = false;
