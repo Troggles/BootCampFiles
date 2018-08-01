@@ -17,7 +17,7 @@ h2 {
 }
 .characterButton {
     border-style: dashed;
-    border-width: 10px;
+    border-width: 1px;
     border-color: green;
 }
 .characterImage {
