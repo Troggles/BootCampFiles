@@ -42,7 +42,7 @@ $(document).on('click', '.initialButtons', function() {
     $('#animals').empty(); 
 
     var animal = $(this).data('animal');
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=wXXyfpeddf8mfzrm8LqVDazd8cqCb6lOlimit=10";
 
     $.ajax({
             url: queryURL,
