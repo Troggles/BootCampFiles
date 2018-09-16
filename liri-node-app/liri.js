@@ -40,7 +40,7 @@ function switchCase() {
   function bandsInTown(parameter){
   
   if (action === 'concert-this')
-  {
+  { 
       var artist="";
       for (var i = 3; i < process.argv.length; i++)
       {
