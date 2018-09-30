@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
 
 	// Your password
 	password: '',
-    database: 'Bamazon'
+    database: 'Bamazon_db'
 });
 
 // parses input to be positive intgers only 
