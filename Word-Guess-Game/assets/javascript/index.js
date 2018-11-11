@@ -1,31 +1,31 @@
 window.onload = function () {
 
-    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
           'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
           't', 'u', 'v', 'w', 'x', 'y', 'z'];
     
-    var categories;         
-    var chosenCategory;            
-    var word ;              
-    var guess ;             
-    var guesses = [ ];      
-    var lives ;             
-    var counter ;           
-    var space;              
+    const categories;         
+    const chosenCategory;            
+    const word ;              
+    const guess ;             
+    const guesses = [ ];      
+    const lives ;             
+    const counter ;           
+    const space;              
   
     // Get elements
-    var showLives = document.getElementById("mylives");
+    const showLives = document.getElementById("mylives");
    
     
   
   
   
     // create alphabet ul
-    var buttons = function () {
+    const buttons = function () {
       myButtons = document.getElementById('buttons');
       letters = document.createElement('ul');
   
-      for (var i = 0; i < alphabet.length; i++) {
+      for (let i = 0; i < alphabet.length; i++) {
         letters.id = 'alphabet';
         list = document.createElement('li');
         list.id = 'letter';
@@ -38,7 +38,7 @@ window.onload = function () {
       
     
     // Select Catagory
-    var selectCat = function () {
+    const selectCat = function () {
       if (chosenCategory === categories[0]) {
         catagoryName.innerHTML = "The clue is Guitar";
       } else if (chosenCategory === categories[1]) {
@@ -53,7 +53,7 @@ window.onload = function () {
       wordHolder = document.getElementById('hold');
       correct = document.createElement('ul');
   
-      for (var i = 0; i < word.length; i++) {
+      for (let i = 0; i < word.length; i++) {
         correct.setAttribute('id', 'my-word');
         guess = document.createElement('li');
         guess.setAttribute('class', 'guess');
@@ -76,7 +76,7 @@ window.onload = function () {
       if (lives < 1) {
         showLives.innerHTML = "Game Over";
       }
-      for (var i = 0; i < guesses.length; i++) {
+      for (let i = 0; i < guesses.length; i++) {
         if (counter + space === guesses.length) {
           showLives.innerHTML = "You Win!";
         }
@@ -89,16 +89,16 @@ window.onload = function () {
     // OnClick Function
      check = function () {
       list.onclick = function () {
-        var guess = (this.innerHTML);
+        let guess = (this.innerHTML);
         this.setAttribute("class", "active");
         this.onclick = null;
-        for (var i = 0; i < word.length; i++) {
+        for (let i = 0; i < word.length; i++) {
           if (word[i] === guess) {
             guesses[i].innerHTML = guess;
             counter += 1;
           } 
         }
-        var j = (word.indexOf(guess));
+        let j = (word.indexOf(guess));
         if (j === -1) {
           lives -= 1;
           comments();
