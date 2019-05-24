@@ -70,9 +70,9 @@ const config = {
     let tr = $('<tr>');
     let a = $('<td>');
     let b = $('<td>');
-    var c = $('<td>');
-    var d = $('<td>');
-    var e = $('<td>');
+    let c = $('<td>');
+    let d = $('<td>');
+    let e = $('<td>');
     a.append(trainName);
     b.append(destination);
     c.append(frequency);
