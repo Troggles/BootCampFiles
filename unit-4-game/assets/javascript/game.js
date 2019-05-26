@@ -1,20 +1,20 @@
 $(document).ready(function(){
 
     //character array
-    var characters = [
+    const characters = [
         {name: 'Aragorn', img: 'assets/images/aragorn.jpg', hp: 120, ap: 20, ca: 20},
         {name: 'Legolas', img: 'assets/images/Legolas.jpg', hp: 100, ap: 25, ca: 25},
         {name: 'Uruk-Hai', img: 'assets/images/Uruk-Hai.jpg', hp: 150, ap: 15, ca: 15},
         {name: 'Sauron', img: 'assets/images/Sauron.jpg', hp: 180, ap: 10, ca: 10}
     ];
-    var playerIsChosen = false;
-    var enemyIsChosen = false;
+    let playerIsChosen = false;
+    let enemyIsChosen = false;
     
     // Display characters 
     function start() {
         $('.display').hide();
-        for (var i = 0; i < characters.length; i++) {
-            var b = $('<button>');
+        for (let i = 0; i < characters.length; i++) {
+            let b = $('<button>');
             b.addClass('characterButton');
             b.attr('name', characters[i].name);
             b.attr('hp', characters[i].hp);
@@ -23,7 +23,7 @@ $(document).ready(function(){
             b.append("<p>" + characters[i].name + "</p><img src='" + characters[i].img + "' class='characterImage'><br><p class='hpDisplay'>HP: " + characters[i].hp + "</p>");
             $('#allCharacters').append(b);
         }
-        var p = $('<p>');
+        let p = $('<p>');
         p.append('Choose your character.');
         $('#gameText').append(p);
     }
@@ -33,12 +33,12 @@ $(document).ready(function(){
         if (!playerIsChosen) {
             $('#gameText').empty();
             $('.display').show();
-            var player = $(this);
+            let player = $(this);
             player.addClass('player');
             $('#yourCharacter').append(player);
             playerIsChosen = true;
             $('#availableEnemies').append($('#allCharacters').children().addClass('possibleEnemies'));
-            var p = $('<p>');
+            let p = $('<p>');
             p.append('Choose your opponent.');
             $('#gameText').append(p);
         }
@@ -48,11 +48,11 @@ $(document).ready(function(){
     $(document).on('click', '.possibleEnemies', function() {
         if (!enemyIsChosen) {
             $('#gameText').empty();
-            var defender = $(this);
+            let defender = $(this);
             defender.addClass('defenderButton').removeClass('possibleEnemies');
             $('#defender').append(defender);
             enemyIsChosen = true;
-            var p = $('<p>');
+            let p = $('<p>');
             p.append('Attack!');
             $('#gameText').append(p);	
         }
@@ -60,12 +60,12 @@ $(document).ready(function(){
     
     // Attack button functionality
     $(document).on('click', '#attack', function() {
-        var playerName = $('#yourCharacter').children().attr('name');
-        var playerHP = $('#yourCharacter').children().attr('hp');	
-        var playerAP = $('#yourCharacter').children().attr('ap');
-        var defenderName = $('#defender').children().attr('name');
-        var defenderHP = $('#defender').children().attr('hp');
-        var defenderCA = $('#defender').children().attr('ca');
+        let playerName = $('#yourCharacter').children().attr('name');
+        let playerHP = $('#yourCharacter').children().attr('hp');	
+        let playerAP = $('#yourCharacter').children().attr('ap');
+        let defenderName = $('#defender').children().attr('name');
+        let defenderHP = $('#defender').children().attr('hp');
+        let defenderCA = $('#defender').children().attr('ca');
         // player and defender are both chosen
         if (playerIsChosen && enemyIsChosen && playerHP > 0) {
             $('#gameText').empty();	
@@ -77,13 +77,13 @@ $(document).ready(function(){
             playerHP -= defenderCA;
             $('#yourCharacter').children().attr('hp', playerHP);
             $('#yourCharacter .hpDisplay').text("HP: " + playerHP);
-            var p = $('<p>');
+            let p = $('<p>');
             p.append("You attacked " + defenderName + " for " + playerAP + " damage.<br>" + defenderName + " attacked you back for " + defenderCA + " damage.");
             $('#gameText').append(p);
             // increment player's AP by player's Base AP
             
             if ($('#yourCharacter').children().length > 0 && $('#defender').children().length > 0 && playerHP > 0) {
-                for (var i = 0; i < characters.length; i++) {
+                for (let i = 0; i < characters.length; i++) {
                     if (characters[i].name == playerName) {
                         var basePlayerAP = characters[i].ap;
                     }				 
@@ -97,7 +97,7 @@ $(document).ready(function(){
                 $('#gameText').empty();
                 $('#defender').empty();
                 enemyIsChosen = false;
-                var p = $('<p>');
+                let p = $('<p>');
                 p.append('You have defeated ' + defenderName + '. Who will you challenge next?');
                 $('#gameText').append(p);
             }
@@ -105,12 +105,12 @@ $(document).ready(function(){
             if ($('#availableEnemies').children().length == 0 && $('#defender').children().length == 0 && playerIsChosen ) {
                 $('#gameText').empty();
                 $('#attack').hide();
-                var p = $('<p>');
+                let p = $('<p>');
                 p.append('WINNER');
                 // restart button
-                var br = $('<br>');
+                let br = $('<br>');
                 p.append(br);
-                var b = $('<button>Restart</button>');
+                let b = $('<button>Restart</button>');
                 b.addClass('btn btn-danger raised restart');
                 p.append(b);
                 $('#gameText').append(p);
@@ -119,12 +119,12 @@ $(document).ready(function(){
             if (playerHP <= 0) {
                 $('#gameText').empty();
                 $('#attack').hide();
-                var p = $('<p>');
+                let p = $('<p>');
                 p.append('GAME OVER!');
                 // restart button
                 var br = $('<br>');
                 p.append(br);
-                var b = $('<button>Restart</button>');
+                let b = $('<button>Restart</button>');
                 b.addClass('btn btn-danger raised restart');
                 p.append(b);
                 $('#gameText').append(p);
@@ -132,12 +132,12 @@ $(document).ready(function(){
         // player is chosen, defender is not chosen, there are enemies available
         } else if (playerIsChosen && !enemyIsChosen && $('#availableEnemies').children().length > 0) {
             $('#gameText').empty();
-            var p = $('<p>');
+            let p = $('<p>');
             p.append('Please choose an enemy to fight!');
             $('#gameText').append(p);
         } else if (!playerIsChosen) {
             $('#gameText').empty();
-            var p = $('<p>');
+            let p = $('<p>');
             p.append('Please choose your character!');
             $('#gameText').append(p);
         }
