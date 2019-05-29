@@ -1,5 +1,5 @@
 // array
-var topics = ['cat', 'dog', 'tiger', 'lion', 'gorilla', 'fish'];
+const topics = ['cat', 'dog', 'tiger', 'lion', 'gorilla', 'fish'];
 
 
 renderButtons();
@@ -11,7 +11,7 @@ $(document).on('click', '#addAnimal', function(){
     // Clear the div
     $('#animalsButtons').empty();
 
-    var animalInput = $('#animal-input').val().trim();
+    let animalInput = $('#animal-input').val().trim();
 
     topics.push(animalInput);
     
@@ -25,9 +25,9 @@ $(document).on('click', '#addAnimal', function(){
 
 // ANIMAL BUTTONS AT THE TOP OF THE PAGE: for loop loops through my array to create buttons with text and attributes
 function renderButtons(){ 
-    for (var i = 0; i < topics.length; i++){
+    for (let i = 0; i < topics.length; i++){
 
-        var b = $('<button>') 
+        let b = $('<button>') 
         b.addClass('initialButtons btn-primary');
         b.attr('data-animal', topics[i]); 
         b.text(topics[i]); 
@@ -41,8 +41,8 @@ $(document).on('click', '.initialButtons', function() {
 
     $('#animals').empty(); 
 
-    var animal = $(this).data('animal');
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=wXXyfpeddf8mfzrm8LqVDazd8cqCb6lO&limit=10";
+    let animal = $(this).data('animal');
+    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=wXXyfpeddf8mfzrm8LqVDazd8cqCb6lO&limit=10";
 
     $.ajax({
             url: queryURL,
@@ -57,18 +57,18 @@ $(document).on('click', '.initialButtons', function() {
 
             // in the response, the first object is an array called data, so all the queries will start with response.data (name this results to shorten the text) ButtonTriggeredAJAX
  
-            var results = response.data;
+            let results = response.data;
 
 
-            for (var j = 0; j < results.length; j++) {
+            for (let j = 0; j < results.length; j++) {
 
-                var animalDiv = $('<div>');
+                let animalDiv = $('<div>');
                 animalDiv.addClass('col-md-4');
                 animalDiv.addClass('height');
 
-                var p = $('<p>').text("Rating: " + results[j].rating);
+                let p = $('<p>').text("Rating: " + results[j].rating);
 
-                var animalImage = $('<img>');
+                let animalImage = $('<img>');
                 animalImage.attr('src', results[j].images.fixed_height_still.url);
                 animalImage.attr('data-still', results[j].images.fixed_height_still.url);
                 animalImage.attr('data-animate', results[j].images.fixed_height.url);
@@ -92,7 +92,7 @@ $(document).on('click', '.initialButtons', function() {
 
 // start and stop gif
 $(document).on('click', '.animalImage', function(){
-    var state = $(this).attr('data-state');
+    let state = $(this).attr('data-state');
 
     if ( state == 'still'){
         $(this).attr('src', $(this).data('animate'));
