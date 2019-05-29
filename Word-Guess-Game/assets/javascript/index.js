@@ -4,6 +4,19 @@ window.onload = function () {
           'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
           't', 'u', 'v', 'w', 'x', 'y', 'z'];
     
+<<<<<<< HEAD
+    const categories;         
+    const chosenCategory;            
+    const word ;              
+    const guess ;             
+    const guesses = [ ];      
+    const lives ;             
+    const counter ;           
+    const space;              
+  
+    // Get elements
+    const showLives = document.getElementById("mylives");
+=======
     let categories;         
     let chosenCategory;            
     let word ;              
@@ -15,13 +28,18 @@ window.onload = function () {
   
     // Get elements
     let showLives = document.getElementById("mylives");
+>>>>>>> fc9a7ac0c377d861ce83e622d8140481a8622a52
    
     
   
   
   
     // create alphabet ul
+<<<<<<< HEAD
+    const buttons = function () {
+=======
     let buttons = function () {
+>>>>>>> fc9a7ac0c377d861ce83e622d8140481a8622a52
       myButtons = document.getElementById('buttons');
       letters = document.createElement('ul');
   
@@ -38,7 +56,11 @@ window.onload = function () {
       
     
     // Select Catagory
+<<<<<<< HEAD
+    const selectCat = function () {
+=======
     let selectCat = function () {
+>>>>>>> fc9a7ac0c377d861ce83e622d8140481a8622a52
       if (chosenCategory === categories[0]) {
         catagoryName.innerHTML = "The clue is Guitar";
       } else if (chosenCategory === categories[1]) {
@@ -89,16 +111,16 @@ window.onload = function () {
     // OnClick Function
      check = function () {
       list.onclick = function () {
-        var guess = (this.innerHTML);
+        let guess = (this.innerHTML);
         this.setAttribute("class", "active");
         this.onclick = null;
-        for (var i = 0; i < word.length; i++) {
+        for (let i = 0; i < word.length; i++) {
           if (word[i] === guess) {
             guesses[i].innerHTML = guess;
             counter += 1;
           } 
         }
-        var j = (word.indexOf(guess));
+        let j = (word.indexOf(guess));
         if (j === -1) {
           lives -= 1;
           comments();
